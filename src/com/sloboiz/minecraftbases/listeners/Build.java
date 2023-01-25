@@ -6,7 +6,6 @@ import com.sloboiz.minecraftbases.items.ItemManager;
 import com.sloboiz.minecraftbases.managers.ChatManager;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
-import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -69,13 +68,13 @@ public class Build implements Listener
 
             if (b.getType() == Material.IRON_ORE)
             {
-                ItemStack drop = new ItemStack(Material.RAW_IRON, 3);
+                ItemStack drop = new ItemStack(Material.RAW_IRON, 2);
                 event.getBlock().getWorld().dropItemNaturally(b.getLocation(), drop);
             }
 
             if (b.getType() == Material.DIAMOND_ORE)
             {
-                ItemStack drop = new ItemStack(Material.DIAMOND, 3);
+                ItemStack drop = new ItemStack(Material.DIAMOND, 2);
                 event.getBlock().getWorld().dropItemNaturally(b.getLocation(), drop);
             }
 

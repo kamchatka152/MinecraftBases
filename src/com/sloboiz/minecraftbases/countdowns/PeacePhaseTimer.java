@@ -2,8 +2,6 @@ package com.sloboiz.minecraftbases.countdowns;
 
 import com.sloboiz.minecraftbases.Main;
 import com.sloboiz.minecraftbases.enums.GamePhases;
-import com.sloboiz.minecraftbases.enums.GameStates;
-import com.sloboiz.minecraftbases.listeners.Movement;
 import com.sloboiz.minecraftbases.managers.ChatManager;
 import org.bukkit.Bukkit;
 import org.bukkit.event.player.PlayerMoveEvent;
@@ -29,6 +27,7 @@ public class PeacePhaseTimer
                 {
                     Bukkit.broadcastMessage("60 seconds have passed.");
                     main.getCustomConfig().set("GameState.Phase.TimeLeft", seconds);
+                    main.saveCustomConfig();
                 }
 
                 if (seconds > 0)
