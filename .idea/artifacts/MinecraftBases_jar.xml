@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MinecraftBases:jar">
+    <output-path>$PROJECT_DIR$/../../Server/plugins</output-path>
+    <root id="archive" name="MinecraftBases.jar">
+      <element id="module-output" name="MinecraftBases" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/dependencies/spigot-api-1.19.3.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
