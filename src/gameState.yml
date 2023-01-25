@@ -1,0 +1,13 @@
+GameState:
+  Cores:
+    Red:
+      X:
+      Y:
+      Z:
+    Blue:
+      X:
+      Y:
+      Z:
+  Phase:
+    Name: UNKNOWN
+    TimeLeft: 1800

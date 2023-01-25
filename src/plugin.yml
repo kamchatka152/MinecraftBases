@@ -1,0 +1,30 @@
+name: MinecraftBases
+version: 1.0
+api-version: 1.19
+main: com.sloboiz.minecraftbases.Main
+author: Kamchatka152
+commands:
+  vanish:
+    description: Set player as spectator
+    usage: /<command>
+  gameStart:
+    description: Start game
+    usage: /<command>
+  gameStop:
+    description: Stop game
+    usage: /<command>
+  setTeam:
+    description: Choose which team to join
+    usage: /<command>
+  listTeams:
+    description: Show team members
+    usage: /<command>
+  setCore:
+    description: Place team's core
+    usage: /<command>
+  listCores:
+    description: Show location of current cores
+    usage: /<command>
+  showGameState:
+    description: Show current game state
+    usage: /<command>
