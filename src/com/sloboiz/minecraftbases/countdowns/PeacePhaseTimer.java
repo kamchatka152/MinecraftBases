@@ -25,13 +25,22 @@ public class PeacePhaseTimer
             {
                 if (seconds % 60 == 0)
                 {
-                    Bukkit.broadcastMessage("60 seconds have passed.");
                     main.getCustomConfig().set("GameState.Phase.TimeLeft", seconds);
                     main.saveCustomConfig();
                 }
 
                 if (seconds > 0)
                 {
+                    if (seconds == 1200)
+                    {
+                        Bukkit.broadcastMessage(new ChatManager(main).prefix + "War starting in 20 minutes");
+                    }
+
+                    if (seconds == 600)
+                    {
+                        Bukkit.broadcastMessage(new ChatManager(main).prefix + "War starting in 10 minutes");
+                    }
+
                     if (seconds == 180)
                     {
                         Bukkit.broadcastMessage(new ChatManager(main).prefix + "War starting in 3 minutes");

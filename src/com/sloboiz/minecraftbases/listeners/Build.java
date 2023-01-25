@@ -50,7 +50,6 @@ public class Build implements Listener
                 event.getBlock().getWorld().dropItemNaturally(this.main.redFOB, ItemManager.forwardOperatingBase);
 
                 this.main.redFOB = null;
-                p.sendMessage("red " + this.main.redFOB.toString());
             }
 
             if (this.main.blueFOB != null &&
@@ -63,7 +62,6 @@ public class Build implements Listener
                 event.getBlock().getWorld().dropItemNaturally(this.main.blueFOB, ItemManager.forwardOperatingBase);
 
                 this.main.blueFOB = null;
-                p.sendMessage("blue " + this.main.blueFOB.toString());
             }
 
             if (b.getType() == Material.IRON_ORE)
@@ -142,22 +140,22 @@ public class Build implements Listener
                 this.main.setGameState(GameStates.LOBBY);
             }
 
-            if (b.getLocation().getBlockX() == this.main.redFOB.getBlockX() &&
+            if (this.main.redFOB != null &&
+                    b.getLocation().getBlockX() == this.main.redFOB.getBlockX() &&
                     b.getLocation().getBlockY() == this.main.redFOB.getBlockY() &&
                     b.getLocation().getBlockZ() == this.main.redFOB.getBlockZ())
             {
-                event.setCancelled(true);
                 b.setType(Material.AIR);
                 event.getBlock().getWorld().dropItemNaturally(this.main.redFOB, ItemManager.forwardOperatingBase);
 
                 this.main.redFOB = null;
             }
 
-            if (b.getLocation().getBlockX() == this.main.blueFOB.getBlockX() &&
+            if (this.main.blueFOB != null &&
+                    b.getLocation().getBlockX() == this.main.blueFOB.getBlockX() &&
                     b.getLocation().getBlockY() == this.main.blueFOB.getBlockY() &&
                     b.getLocation().getBlockZ() == this.main.blueFOB.getBlockZ())
             {
-                event.setCancelled(true);
                 b.setType(Material.AIR);
                 event.getBlock().getWorld().dropItemNaturally(this.main.blueFOB, ItemManager.forwardOperatingBase);
 
@@ -191,22 +189,22 @@ public class Build implements Listener
                 this.main.setGameState(GameStates.LOBBY);
             }
 
-            if (b.getLocation().getBlockX() == this.main.redFOB.getBlockX() &&
+            if (this.main.redFOB != null &&
+                    b.getLocation().getBlockX() == this.main.redFOB.getBlockX() &&
                     b.getLocation().getBlockY() == this.main.redFOB.getBlockY() &&
                     b.getLocation().getBlockZ() == this.main.redFOB.getBlockZ())
             {
-                event.setCancelled(true);
                 b.setType(Material.AIR);
                 b.getWorld().dropItemNaturally(this.main.redFOB, ItemManager.forwardOperatingBase);
 
                 this.main.redFOB = null;
             }
 
-            if (b.getLocation().getBlockX() == this.main.blueFOB.getBlockX() &&
+            if (this.main.blueFOB != null &&
+                    b.getLocation().getBlockX() == this.main.blueFOB.getBlockX() &&
                     b.getLocation().getBlockY() == this.main.blueFOB.getBlockY() &&
                     b.getLocation().getBlockZ() == this.main.blueFOB.getBlockZ())
             {
-                event.setCancelled(true);
                 b.setType(Material.AIR);
                 b.getWorld().dropItemNaturally(this.main.blueFOB, ItemManager.forwardOperatingBase);
 
@@ -256,18 +254,12 @@ public class Build implements Listener
                     {
                         b.setType(Material.RED_BANNER);
                         this.main.redFOB = b.getLocation();
-                        p.sendMessage(this.main.redFOB.getBlockX() + " " +
-                                this.main.redFOB.getBlockY()+ " " +
-                                this.main.redFOB.getBlockZ());
                     }
 
                     if (this.main.blueTeam.contains(p))
                     {
                         b.setType(Material.BLUE_BANNER);
                         this.main.blueFOB = b.getLocation();
-                        p.sendMessage(this.main.blueFOB.getBlockX() + " " +
-                                this.main.blueFOB.getBlockY()+ " " +
-                                this.main.blueFOB.getBlockZ());
                     }
                 }
             }
